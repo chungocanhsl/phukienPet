@@ -1,13 +1,13 @@
 @extends('layouts.appadmin')
 @section('title')
-    Categories
+    Danh mục
 @endsection
 
 @section('content')
     {{Form::hidden('',$increment=1)}}
 <div class="card">
     <div class="card-body">
-        <h4 class="card-title">Categories</h4>
+        <h4 class="card-title">Danh mục</h4>
         @if(Session::has('status'))
             <div class="alert alert-success">
                 {{Session::get('status')}}
@@ -20,9 +20,9 @@
                     <table id="order-listing" class="table">
                         <thead>
                         <tr>
-                            <th>Order #(STT)</th>
-                            <th>Category_name(Danh mục)</th>
-                            <th>Actions(Hanh dong)</th>
+                            <th>STT</th>
+                            <th>Tên danh mục</th>
+                            <th>Hành động</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -31,8 +31,8 @@
                             <td>{{$increment}}</td>
                             <td>{{$category->category_name}}</td>
                             <td>
-                                <button class="btn btn-outline-primary" onclick="window.location= '{{url('/editcategory/'.$category->id)}}'">Edit</button>
-                                <a href="/deletecategory/{{$category->id}}" class="btn btn-outline-danger" id="delete">Delete</a>
+                                <button class="btn btn-outline-primary" onclick="window.location= '{{url('/editcategory/'.$category->id)}}'">Sửa</button>
+                                <a href="/deletecategory/{{$category->id}}" class="btn btn-outline-danger" id="delete">Xóa</a>
                             </td>
                         </tr>
 

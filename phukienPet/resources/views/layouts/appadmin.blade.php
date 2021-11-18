@@ -74,7 +74,7 @@
     $(document).on("click","#delete", function (e) {
         e.preventDefault();
         var link = $(this).attr("href");
-        bootbox.confirm("Do you want to delete this? ", function (confirmed) {
+        bootbox.confirm("Bạn có chắc chắn muốn xóa không? ", function (confirmed) {
             if(confirmed) {
                 window.location.href=link;
             };

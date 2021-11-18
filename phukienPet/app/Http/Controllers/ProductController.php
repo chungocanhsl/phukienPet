@@ -37,7 +37,14 @@ class ProductController extends Controller
                 'product_price' => 'required',
                 'product_description' => 'required',
                 'product_image' => 'image|nullable|max:1999',
-            ]);
+            ],
+                [
+                    'product_name.required' => 'Bạn chưa nhập tên sản phẩm!',
+                    'product_price.required' => 'Bạn chưa nhập giá sản phẩm!',
+                    'product_description.required' => 'Bạn chưa nhập mô tả sản phẩm!',
+                ]);
+
+
 
             if($request->hasFile('product_image')) {
                 //1. get file name with ext(duoi)
@@ -71,11 +78,11 @@ class ProductController extends Controller
 
 
             $product->save();
-            return redirect('/addproduct')->with('status','The '. $product->product_name .' product has been saved successfully');
+            return redirect('/addproduct')->with('status','Sản phẩm '. $product->product_name .' được thêm thành công');
 
 
         } else {
-            return redirect('/addproduct')->with('status1','Do select the category please');
+            return redirect('/addproduct')->with('status1','Vui lòng lựa chọn danh mục');
 
         }
 
@@ -132,7 +139,7 @@ class ProductController extends Controller
         }
         $product->update();
 
-        return redirect('/products')->with('status','The '. $product->product_name .' product has been updated successfully');
+        return redirect('/products')->with('status','Sản phẩm '. $product->product_name .' cập nhật thành công');
 
     }
 
@@ -146,7 +153,7 @@ class ProductController extends Controller
 
         $product->delete();
 
-        return redirect('/products')->with('status','The '. $product->product_name .' product has been deleted successfully');
+        return redirect('/products')->with('status','Sản phẩn '. $product->product_name .' xóa thành công');
 
 
     }
@@ -156,7 +163,7 @@ class ProductController extends Controller
 
         $product->status = 1;
         $product->update();
-        return redirect('/products')->with('status','The '. $product->product_name .' product status has been activated successfully');
+        return redirect('/products')->with('status','Trạng thái sản phẩm '. $product->product_name .' đã được chuyển sang thành đang hoạt động');
 
 
     }
@@ -166,7 +173,7 @@ class ProductController extends Controller
 
         $product->status = 0;
         $product->update();
-        return redirect('/products')->with('status','The '. $product->product_name .' product status has been unactivated successfully');
+        return redirect('/products')->with('status','Trạng thái sản phẩm  '. $product->product_name .' đã được chuyển sang thành không hoạt động');
 
 
     }

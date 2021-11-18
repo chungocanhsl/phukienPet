@@ -37,10 +37,10 @@ class CategoryController extends Controller
             $category->category_name = $request->input('category_name');
             $category->save();
 
-            return redirect('/addcategory')->with('status','The '. $category->category_name .' category has been saved successfully');
+            return redirect('/addcategory')->with('status','Danh mục '. $category->category_name .' được thêm thành công');
 
         }else {
-            return redirect('/addcategory')->with('status1','The '. $request->input('category_name').' category already exist');
+            return redirect('/addcategory')->with('status1','Danh mục '. $request->input('category_name').' đã tồn tại');
 
         }
     }

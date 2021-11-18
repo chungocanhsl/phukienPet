@@ -47,18 +47,18 @@ class PdfController extends Controller
                         <table class="table">
                             <thead class="thead">
                                 <tr class="text-left">
-                                    <th>Client Name : '.$name.'<br> Client Address : '.$address.' <br> Date : '.$date.'</th>
+                                    <th>Tên khách hàng : '.$name.'<br> Địa chỉ : '.$address.' <br> Ngày đặt hàng : '.$date.'</th>
                                 </tr>
                             </thead>
                         </table>
                         <table class="table">
                             <thead class="thead-primary">
                                 <tr class="text-center">
-                                    <th>Image</th>
-                                    <th>Product name</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
+                                    <th>Ảnh</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Giá</th>
+                                    <th>Số lượng</th>
+                                    <th>Thành tiền</th>
                                 </tr>
                             </thead>
                             <tbody>';
@@ -95,7 +95,7 @@ class PdfController extends Controller
         $output .= '<table class="table">
                         <thead class="thead">
                             <tr class="text-center">
-                                <th>Total</th>
+                                <th>Thành tiền</th>
                                 <th>$ '.$totalPrice.'</th>
                             </tr>
                         </thead>

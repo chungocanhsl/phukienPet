@@ -34,7 +34,7 @@
                     </a>
 
                     <span class="login100-form-title p-b-34 p-t-27">
-						Signup
+						Đăng ký
 					</span>
 
                     <div class="wrap-input100 validate-input" data-validate = "Enter username">
@@ -51,13 +51,13 @@
 
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn" type="submit">
-                            Signup
+                            Đăng ký
                         </button>
                     </div>
 
                     <div class="text-center p-t-90">
                         <a class="txt1" href="/client_login">
-                            Do you have an account? Login
+                            Bạn đã có tài khoản? Đăng nhập ngay
                         </a>
                     </div>
 

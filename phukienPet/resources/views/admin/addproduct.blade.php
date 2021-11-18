@@ -1,6 +1,6 @@
 @extends('layouts.appadmin')
 @section('title')
-    Add Product
+    Thêm sản phẩm
 @endsection
 
 @section('content')
@@ -9,7 +9,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Create Product</h4>
+                <h4 class="card-title">Tạo sản phẩm</h4>
                 @if(Session::has('status'))
                     <div class="alert alert-success">
                         {{Session::get('status')}}
@@ -22,34 +22,44 @@
                     </div>
                 @endif
 
+                @if(count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                                <li>{{$error}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
                     {!! Form::open(['action' => 'ProductController@saveproduct',
                     'method' =>'post', 'class' => 'cmxform', 'id' => 'commentForm','enctype'=>'multipart/form-data']) !!}
                     {{csrf_field()}}
 
                         <div class="form-group">
-                            {{Form::label('','Product Name',['for' => 'cname'])}}
+                            {{Form::label('','Tên sản phẩm',['for' => 'cname'])}}
                             {{Form::text('product_name', '', [
                             'class' => 'form-control',  'minlength' => '2'])}}
                         </div>
 
                     <div class="form-group">
-                        {{Form::label('','Product Price',['for' => 'cname'])}}
+                        {{Form::label('','Giá',['for' => 'cname'])}}
                         {{Form::number('product_price', '', [
                         'class' => 'form-control',  'minlength' => '2'])}}
                     </div>
                 <div class="form-group">
-                    {{Form::label('','Product Description',['for' => 'cname'])}}
+                    {{Form::label('','Mô tả',['for' => 'cname'])}}
                     {{Form::text('product_description', '', [
                     'class' => 'form-control',  'minlength' => '2'])}}
                 </div>
                 <div class="form-group">
-                    {{Form::label('','Product Category',['for' => 'cname'])}}
+                    {{Form::label('','Danh mục',['for' => 'cname'])}}
                     {{Form::select('product_category', $categories,
-                    null, ['placeholder' => 'Select category','class' => 'form-control'])}}
+                    null, ['placeholder' => 'Chọn danh mục','class' => 'form-control'])}}
                 </div>
 
                 <div class="form-group">
-                    {{Form::label('','Product Image',['for' => 'cname'])}}
+                    {{Form::label('','Ảnh',['for' => 'cname'])}}
                     {{Form::file('product_image', [
                     'class' => 'form-control'])}}
                 </div>
@@ -57,7 +67,7 @@
 
 
 
-                {{Form::submit('Save',['class' => 'btn btn-primary'])}}
+                {{Form::submit('Lưu',['class' => 'btn btn-primary'])}}
 
                 {!! Form::close() !!}
             </div>

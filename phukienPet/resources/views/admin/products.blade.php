@@ -1,6 +1,6 @@
 @extends('layouts.appadmin')
 @section('title')
-    Products
+    Sản phẩm
 @endsection
 
 @section('content')
@@ -8,7 +8,7 @@
 
     <div class="card">
     <div class="card-body">
-        <h4 class="card-title">Products</h4>
+        <h4 class="card-title">Sản phẩm</h4>
         @if(Session::has('status'))
             <div class="alert alert-success">
                 {{Session::get('status')}}
@@ -20,13 +20,13 @@
                     <table id="order-listing" class="table">
                         <thead>
                         <tr>
-                            <th>Order #</th>
-                            <th>Image</th>
-                            <th>Product name</th>
-                            <th>Price</th>
-                            <th>Category</th>
-                            <th>Status</th>
-                            <th>Actions</th>
+                            <th>STT</th>
+                            <th>Ảnh</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Giá</th>
+                            <th>Thuộc danh mục</th>
+                            <th>Trạng thái</th>
+                            <th>Hành động</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -40,20 +40,20 @@
 
                             @if($product->status == 1)
                                 <td>
-                                    <label class="badge badge-success">Activated</label>
+                                    <label class="badge badge-success">Hoạt động</label>
                                 </td>
                             @else
                             <td>
-                                <label class="badge badge-danger">Unactivated</label>
+                                <label class="badge badge-danger">Không hoạt động</label>
                             </td>
                             @endif
                             <td>
-                                <button class="btn btn-outline-primary" onclick="window.location= '{{url('/editproduct/'.$product->id)}}'">Edit</button>
-                                <a href="/deleteproduct/{{$product->id}}" class="btn btn-outline-danger" id="delete">Delete</a>
+                                <button class="btn btn-outline-primary" onclick="window.location= '{{url('/editproduct/'.$product->id)}}'">Sửa </button>
+                                <a href="/deleteproduct/{{$product->id}}" class="btn btn-outline-danger" id="delete">Xóa</a>
                                 @if($product->status == 1)
-                                    <button class="btn btn-outline-warning" onclick="window.location= '{{url('/unactivate_product/'.$product->id)}}'">Unactivate</button>
+                                    <button class="btn btn-outline-warning" onclick="window.location= '{{url('/unactivate_product/'.$product->id)}}'">Không hoạt động</button>
                                 @else
-                                    <button class="btn btn-outline-success" onclick="window.location= '{{url('/activate_product/'.$product->id)}}'">Activate</button>
+                                    <button class="btn btn-outline-success" onclick="window.location= '{{url('/activate_product/'.$product->id)}}'">Hoạt động</button>
 
                                 @endif
                             </td>
@@ -64,6 +64,7 @@
                         {{Form::hidden('',$increment=$increment+1)}}
 
                         @endforeach
+
                         </tbody>
                     </table>
                 </div>

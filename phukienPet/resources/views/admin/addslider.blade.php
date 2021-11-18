@@ -1,6 +1,6 @@
 @extends('layouts.appadmin')
 @section('title')
-    Add Slider
+    Thêm slider
 @endsection
 
 @section('content')
@@ -9,37 +9,45 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Create slider</h4>
+                <h4 class="card-title">Tạo slider</h4>
                 @if(Session::has('status'))
                     <div class="alert alert-success">
                         {{Session::get('status')}}
                     </div>
                 @endif
-
+                @if(count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                                <li>{{$error}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                     {!! Form::open(['action' => 'SliderController@saveslider',
                     'method' =>'post', 'class' => 'cmxform', 'id' => 'commentForm', 'enctype' => 'multipart/form-data']) !!}
                     {{csrf_field()}}
                         <div class="form-group">
-                            {{Form::label('','Description one',['for' => 'cname'])}}
+                            {{Form::label('','Mô tả thứ nhất',['for' => 'cname'])}}
                             {{Form::text('description_one', '', [
                             'class' => 'form-control',  'minlength' => '2'])}}
                         </div>
 
                 <div class="form-group">
-                    {{Form::label('','Description two',['for' => 'cname'])}}
+                    {{Form::label('','Mô tả thứ hai',['for' => 'cname'])}}
                     {{Form::text('description_two', '', [
                     'class' => 'form-control',  'minlength' => '2'])}}
                 </div>
 
                 <div class="form-group">
-                    {{Form::label('','Slider Image',['for' => 'cname'])}}
+                    {{Form::label('','Ảnh slider',['for' => 'cname'])}}
                     {{Form::file('slider_image', [
                     'class' => 'form-control'])}}
                 </div>
 
 
 
-                {{Form::submit('Save',['class' => 'btn btn-primary'])}}
+                {{Form::submit('Lưu',['class' => 'btn btn-primary'])}}
 
                 {!! Form::close() !!}
             </div>

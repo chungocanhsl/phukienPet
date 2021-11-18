@@ -9,8 +9,7 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Cart</span></p>
-                <h1 class="mb-0 bread">My Cart</h1>
+                <h1 class="mb-0 bread">Giỏ hàng</h1>
             </div>
         </div>
     </div>
@@ -26,10 +25,10 @@
                         <tr class="text-center">
                             <th>&nbsp;</th>
                             <th>&nbsp;</th>
-                            <th>Product name</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Giá thành</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -55,7 +54,7 @@
                                                 <input type="number" name="quantity" class="quantity form-control input-number" value="{{$product['qty']}}" min="1" max="100">
                                                 <input type="hidden" name="id" class="quantity form-control input-number" value="{{$product['product_id']}}" min="1" max="100">
                                             </div>
-                                            {{Form::submit('Update',['class' => 'btn btn-success'])}}
+                                            {{Form::submit('Cập nhật',['class' => 'btn btn-success'])}}
 
                                             {!! Form::close() !!}
 
@@ -83,60 +82,36 @@
         <div class="row justify-content-end">
             <div class="col-lg-4 mt-5 cart-wrap ftco-animate">
                 <div class="cart-total mb-3">
-                    <h3>Coupon Code</h3>
-                    <p>Enter your coupon code if you have one</p>
+                    <h3>Nhập mã giảm giá</h3>
                     <form action="#" class="info">
                         <div class="form-group">
-                            <label for="">Coupon code</label>
+                            <label for="">Mã giảm giá</label>
                             <input type="text" class="form-control text-left px-3" placeholder="">
                         </div>
                     </form>
                 </div>
-                <p><a href="checkout.html" class="btn btn-primary py-3 px-4">Apply Coupon</a></p>
+                <p><a href="checkout.html" class="btn btn-primary py-3 px-4">Click</a></p>
             </div>
+
             <div class="col-lg-4 mt-5 cart-wrap ftco-animate">
                 <div class="cart-total mb-3">
-                    <h3>Estimate shipping and tax</h3>
-                    <p>Enter your destination to get a shipping estimate</p>
-                    <form action="#" class="info">
-                        <div class="form-group">
-                            <label for="">Country</label>
-                            <input type="text" class="form-control text-left px-3" placeholder="">
-                        </div>
-                        <div class="form-group">
-                            <label for="country">State/Province</label>
-                            <input type="text" class="form-control text-left px-3" placeholder="">
-                        </div>
-                        <div class="form-group">
-                            <label for="country">Zip/Postal Code</label>
-                            <input type="text" class="form-control text-left px-3" placeholder="">
-                        </div>
-                    </form>
-                </div>
-                <p><a href="checkout.html" class="btn btn-primary py-3 px-4">Estimate</a></p>
-            </div>
-            <div class="col-lg-4 mt-5 cart-wrap ftco-animate">
-                <div class="cart-total mb-3">
-                    <h3>Cart Totals</h3>
+                    <h3>Tổng tiền hàng</h3>
+
                     <p class="d-flex">
-                        <span>Subtotal</span>
-                        <span>$20.60</span>
-                    </p>
-                    <p class="d-flex">
-                        <span>Delivery</span>
+                        <span>Mã free ship</span>
                         <span>$0.00</span>
                     </p>
                     <p class="d-flex">
-                        <span>Discount</span>
-                        <span>$3.00</span>
+                        <span>Mã giảm giá</span>
+                        <span>$0.00</span>
                     </p>
                     <hr>
                     <p class="d-flex total-price">
-                        <span>Total</span>
+                        <span>Tổng tiền</span>
                         <span>$17.60</span>
                     </p>
                 </div>
-                <p><a href="/checkout" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
+                <p><a href="/checkout" class="btn btn-primary py-3 px-4">Đặt hàng</a></p>
             </div>
         </div>
     </div>

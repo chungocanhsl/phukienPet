@@ -8,8 +8,7 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Products</span></p>
-                <h1 class="mb-0 bread">Products</h1>
+                <h1 class="mb-0 bread">Sản phẩm xinh xẻo dành cho Pet iu <3</h1>
             </div>
         </div>
     </div>
@@ -20,7 +19,7 @@
         <div class="row justify-content-center">
             <div class="col-md-10 mb-5 text-center">
                 <ul class="product-category">
-                    <li><a href="{{URL::to('/shop')}}" class="{{(request()->is('shop') ? 'active' : '')}}">All</a></li>
+                    <li><a href="{{URL::to('/shop')}}" class="{{(request()->is('shop') ? 'active' : '')}}">Tất cả</a></li>
                     @foreach($categories as $category)
                          <li><a href="/view_by_cate/{{$category->category_name}}" class="{{(request()->is('view_by_cate/'.$category->category_name) ? 'active' : '')}}">{{$category->category_name}}</a></li>
                    @endforeach
@@ -59,18 +58,14 @@
                 </div>
             </div>
                 @endforeach
+
         </div>
         <div class="row mt-5">
             <div class="col text-center">
                 <div class="block-27">
                     <ul>
-                        <li><a href="#">&lt;</a></li>
-                        <li class="active"><span>1</span></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&gt;</a></li>
+                        <li>{{ $products->links() }}</li>
+
                     </ul>
                 </div>
             </div>

@@ -36,8 +36,8 @@
                         <span class="flaticon-shipped"></span>
                     </div>
                     <div class="media-body">
-                        <h3 class="heading">Free Shipping</h3>
-                        <span>On order over $100</span>
+                        <h3 class="heading">Miễn phí ship</h3>
+                        <span>Với đơn hàng từ 300.000VND</span>
                     </div>
                 </div>
             </div>
@@ -47,8 +47,8 @@
                         <span class="flaticon-diet"></span>
                     </div>
                     <div class="media-body">
-                        <h3 class="heading">Always Happy</h3>
-                        <span>Product well package</span>
+                        <h3 class="heading">Sản phẩm tốt</h3>
+                        <span>Giá cả phải chăng</span>
                     </div>
                 </div>
             </div>
@@ -58,8 +58,8 @@
                         <span class="flaticon-award"></span>
                     </div>
                     <div class="media-body">
-                        <h3 class="heading">Superior Quality</h3>
-                        <span>Quality Products</span>
+                        <h3 class="heading">Chất lượng cao</h3>
+                        <span>Chất lượng được đặt lên hàng đầu</span>
                     </div>
                 </div>
             </div>
@@ -69,8 +69,8 @@
                         <span class="flaticon-customer-service"></span>
                     </div>
                     <div class="media-body">
-                        <h3 class="heading">Support</h3>
-                        <span>24/7 Support</span>
+                        <h3 class="heading">Hỗ trợ</h3>
+                        <span>Hỗ trợ 24/7</span>
                     </div>
                 </div>
             </div>
@@ -87,8 +87,8 @@
                         <div class="category-wrap-2 ftco-animate img align-self-stretch d-flex" style="background-image: url(/frontend/frontend/images/chuongcho1.jpg);">
                             <div class="text text-center">
                                 <h2>Pet-Okela</h2>
-                                <p>So many cute items</p>
-                                <p><a href="{{url('/shop')}}" class="btn btn-primary">Shop now</a></p>
+                                <p>Rất nhiều sản phẩm xinh xẻo</p>
+                                <p><a href="{{url('/shop')}}" class="btn btn-primary">Xem shop</a></p>
                             </div>
                         </div>
                     </div>
@@ -129,10 +129,9 @@
     <div class="container">
         <div class="row justify-content-end">
             <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
-                <span class="subheading">Best Price For You</span>
-                <h2 class="mb-4">Deal of the day</h2>
-                <p>Impossibly Cute Products You'll Actually Use</p>
-                <h3><a href="#">Spinach</a></h3>
+                <span class="subheading">Giá tốt nhất cho bạn</span>
+                <h2 class="mb-4">Bạn và cún của bạn sẽ rất hài lòng với sản phẩm của chúng tôi</h2>
+                <p>Các bạn cún sẽ rất thích</p>
                 <span class="price">$10 <a href="#">now $5 only</a></span>
                 <div id="timer" class="d-flex mt-5">
                     <div class="time" id="days"></div>
@@ -149,9 +148,7 @@
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section ftco-animate text-center">
-                <span class="subheading">Testimony</span>
-                <h2 class="mb-4">Our satisfied customer says</h2>
-                <p>Impossibly Cute Products You'll Actually Use</p>
+                <span class="subheading">Phản hồi của khách hàng</span>
             </div>
         </div>
         <div class="row ftco-animate">
@@ -159,71 +156,66 @@
                 <div class="carousel-testimony owl-carousel">
                     <div class="item">
                         <div class="testimony-wrap p-4 pb-5">
-                            <div class="user-img mb-5" style="background-image: url(/frontend/images/person_1.jpg)">
+                            <div class="user-img mb-5" style="background-image: url(/frontend/images/anhs2.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                             </div>
                             <div class="text text-center">
-                                <p class="mb-5 pl-4 line">Impossibly Cute Products You'll Actually Use</p>
+                                <p class="mb-5 pl-4 line">Bạn nhỏ của tôi rất thích sản phẩm này</p>
                                 <p class="name">Garreth Smith</p>
-                                <span class="position">Marketing Manager</span>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="testimony-wrap p-4 pb-5">
-                            <div class="user-img mb-5" style="background-image: url(/frontend/images/person_2.jpg)">
+                            <div class="user-img mb-5" style="background-image: url(/frontend/images/anhs3.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                             </div>
                             <div class="text text-center">
-                                <p class="mb-5 pl-4 line">Impossibly Cute Products You'll Actually Use</p>
+                                <p class="mb-5 pl-4 line">Bạn nhỏ của tôi rất thích sản phẩm này</p>
                                 <p class="name">Garreth Smith</p>
-                                <span class="position">Interface Designer</span>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="testimony-wrap p-4 pb-5">
-                            <div class="user-img mb-5" style="background-image: url(/frontend/images/person_3.jpg)">
+                            <div class="user-img mb-5" style="background-image: url(/frontend/images/anhs4.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                             </div>
                             <div class="text text-center">
-                                <p class="mb-5 pl-4 line">Impossibly Cute Products You'll Actually Use</p>
+                                <p class="mb-5 pl-4 line">Bạn nhỏ của tôi rất thích sản phẩm này</p>
                                 <p class="name">Garreth Smith</p>
-                                <span class="position">UI Designer</span>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="testimony-wrap p-4 pb-5">
-                            <div class="user-img mb-5" style="background-image: url(/frontend/images/person_1.jpg)">
+                            <div class="user-img mb-5" style="background-image: url(/frontend/images/anhs5.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                             </div>
                             <div class="text text-center">
-                                <p class="mb-5 pl-4 line">Impossibly Cute Products You'll Actually Use</p>
+                                <p class="mb-5 pl-4 line">Bạn nhỏ của tôi rất thích sản phẩm này</p>
                                 <p class="name">Garreth Smith</p>
-                                <span class="position">Web Developer</span>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="testimony-wrap p-4 pb-5">
-                            <div class="user-img mb-5" style="background-image: url(/frontend/images/person_1.jpg)">
+                            <div class="user-img mb-5" style="background-image: url(/frontend/images/anhs3.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                             </div>
                             <div class="text text-center">
-                                <p class="mb-5 pl-4 line">Impossibly Cute Products You'll Actually Use</p>
+                                <p class="mb-5 pl-4 line">Bạn nhỏ của tôi rất thích sản phẩm này</p>
                                 <p class="name">Garreth Smith</p>
-                                <span class="position">System Analyst</span>
                             </div>
                         </div>
                     </div>

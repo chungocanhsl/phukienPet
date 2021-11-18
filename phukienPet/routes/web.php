@@ -18,6 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 });*/
 
+Route::get('/clear-cache',function () {
+   $exitCode = Artisan::call('cache-clear');
+   //return
+});
 
 Route::get('/','ClientController@home');
 Route::get('/cart','ClientController@cart');
@@ -30,7 +34,7 @@ Route::get('/removeitem/{id}','ClientController@removeitem');
 Route::post('/postcheckout','ClientController@postcheckout');
 Route::post('/createaccount','ClientController@createaccount');
 Route::post('/accessaccount','ClientController@accessaccount');
-Route::get('/cient_logout','ClientController@logout');
+Route::get('/client_logout','ClientController@logout');
 Route::get('/addToCart/{id}','ClientController@addToCart');
 Route::get('/view_by_cate/{name}','ClientController@view_by_cate');
 
@@ -47,6 +51,9 @@ Route::get('/categories','CategoryController@categories');
 Route::get('/editcategory/{id}','CategoryController@editcategory');
 Route::post('/updatecategory','CategoryController@updatecategory');
 Route::get('/deletecategory/{id}','CategoryController@deletecategory');
+
+
+Route::get('/search','CategoryController@getSearch');
 
 
 Route::get('/addproduct','ProductController@addproduct');

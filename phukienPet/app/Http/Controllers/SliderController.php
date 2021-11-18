@@ -67,7 +67,7 @@ class SliderController extends Controller
 
 
         $slider->save();
-        return redirect('/addslider')->with('status', 'The Slider has been saved successfully');
+        return redirect('/addslider')->with('status', 'Slider được thêm thành công');
 
 
     }
@@ -120,7 +120,7 @@ class SliderController extends Controller
 
         $slider->update();
 
-        return redirect('/sliders')->with('status', 'The Slider has been updated successfully');
+        return redirect('/sliders')->with('status', 'Slider được cập nhật thành công');
 
 
     }
@@ -134,7 +134,7 @@ class SliderController extends Controller
 
         $slider->delete();
 
-        return redirect('/sliders')->with('status','The Slider has been deleted successfully');
+        return redirect('/sliders')->with('status','Slider được xóa thành công');
 
     }
 
@@ -142,7 +142,7 @@ class SliderController extends Controller
         $slider = Slider::find($id);
         $slider->status= 0;
         $slider->update();
-        return redirect('/sliders')->with('status','The Slider status has been unactivated successfully');
+        return redirect('/sliders')->with('status','Trạng thái slider được chuyển thành không hoạt động');
 
     }
 
@@ -150,7 +150,7 @@ class SliderController extends Controller
         $slider = Slider::find($id);
         $slider->status= 1;
         $slider->update();
-        return redirect('/sliders')->with('status','The Slider status has been activated successfully');
+        return redirect('/sliders')->with('status','Trạng thái slider được chuyển thành đang hoạt động');
 
     }
 }

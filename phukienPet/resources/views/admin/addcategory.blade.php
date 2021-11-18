@@ -1,6 +1,6 @@
 @extends('layouts.appadmin')
 @section('title')
-    Add Category
+    Thêm danh mục
 @endsection
 
 @section('content')
@@ -9,7 +9,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Create category</h4>
+                <h4 class="card-title">Tạo danh mục</h4>
 
                 @if(Session::has('status'))
                 <div class="alert alert-success">
@@ -37,11 +37,11 @@
                     'method' =>'post', 'class' => 'cmxform', 'id' => 'commentForm']) !!}
                     {{csrf_field()}}
                         <div class="form-group">
-                            {{Form::label('','Product Category',['for' => 'cname'])}}
+                            {{Form::label('','Tên danh mục',['for' => 'cname'])}}
                             {{Form::text('category_name', '', [
                             'class' => 'form-control',  'minlength' => '2'])}}
                         </div>
-                {{Form::submit('Save',['class' => 'btn btn-primary'])}}
+                {{Form::submit('Lưu',['class' => 'btn btn-primary'])}}
 
                 {!! Form::close() !!}
             </div>

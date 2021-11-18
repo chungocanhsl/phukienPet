@@ -9,8 +9,7 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Checkout</span></p>
-                <h1 class="mb-0 bread">Checkout</h1>
+                <h1 class="mb-0 bread">Thanh toán</h1>
             </div>
         </div>
     </div>
@@ -24,7 +23,7 @@
                    'method' =>'post', 'class' => 'billing-form', 'id' =>'checkout-form']) !!}
                 {{csrf_field()}}
 
-                    <h3 class="mb-4 billing-heading">Billing Details</h3>
+                    <h3 class="mb-4 billing-heading">Vui lòng điền đầy đủ thông tin </h3>
                 @if(Session::has('error'))
                     <div class="alert alert-danger">
                       {{Session::get('error')}}
@@ -34,7 +33,7 @@
                     <div class="row align-items-end">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="firstname">FullName</label>
+                                <label for="firstname">Tên</label>
                                 <input type="text" name="name" class="form-control">
                             </div>
                         </div>
@@ -44,7 +43,7 @@
                         <div class="w-100"></div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="streetaddress"> Address</label>
+                                <label for="streetaddress">Địa chỉ</label>
                                 <input type="text" name="address" class="form-control" >
                             </div>
                         </div>
@@ -52,26 +51,26 @@
                         <div class="w-100"></div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="towncity">Name on card</label>
+                                <label for="towncity">Tên trên thẻ</label>
                                 <input type="text" id="card-name" class="form-control" placeholder="">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="postcodezip">Number</label>
+                                <label for="postcodezip">Số thẻ</label>
                                 <input type="text" id="card-number" class="form-control" placeholder="">
                             </div>
                         </div>
                         <div class="w-100"></div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="phone">Expiration Month</label>
+                                <label for="phone">Tháng hết hạn</label>
                                 <input type="text" id="card-expiry-month" class="form-control" placeholder="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="emailaddress">Expiration Year</label>
+                                <label for="emailaddress">Năm hết hạn</label>
                                 <input type="text" id="card-expiry-year" class="form-control" placeholder="">
                             </div>
                         </div>
@@ -85,19 +84,11 @@
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="submit" class="btn btn-primary" value="Buy Now">
+                                <input type="submit" class="btn btn-primary" value="Đặt hàng ngay">
                             </div>
                         </div>
 
-                        {{--
-                        <div class="col-md-12">
-                            <div class="form-group mt-4">
-                                <div class="radio">
-                                    <label class="mr-3"><input type="radio" name="optradio"> Create an Account? </label>
-                                    <label><input type="radio" name="optradio"> Ship to different address</label>
-                                </div>
-                            </div>
-                        </div>--}}
+
                     </div>
                 {!! Form::close() !!}
             </div>
@@ -105,61 +96,24 @@
                 <div class="row mt-5 pt-3">
                     <div class="col-md-12 d-flex mb-5">
                         <div class="cart-detail cart-total p-3 p-md-4">
-                            <h3 class="billing-heading mb-4">Cart Total</h3>
+                            <h3 class="billing-heading mb-4">Giỏ hàng</h3>
+
                             <p class="d-flex">
-                                <span>Subtotal</span>
-                                <span>$20.60</span>
-                            </p>
-                            <p class="d-flex">
-                                <span>Delivery</span>
+                                <span>Mã free ship</span>
                                 <span>$0.00</span>
                             </p>
                             <p class="d-flex">
-                                <span>Discount</span>
-                                <span>$3.00</span>
+                                <span>Mã giảm giá</span>
+                                <span>$0.00</span>
                             </p>
                             <hr>
                             <p class="d-flex total-price">
-                                <span>Total</span>
+                                <span>Thành tiền</span>
                                 <span>${{Session::get('cart')->totalPrice}}</span>
                             </p>
                         </div>
                     </div>
-                    {{--
-                    <div class="col-md-12">
-                        <div class="cart-detail p-3 p-md-4">
-                            <h3 class="billing-heading mb-4">Payment Method</h3>
-                            <div class="form-group">
-                                <div class="col-md-12">
-                                    <div class="radio">
-                                        <label><input type="radio" name="optradio" class="mr-2"> Direct Bank Tranfer</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-12">
-                                    <div class="radio">
-                                        <label><input type="radio" name="optradio" class="mr-2"> Check Payment</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-12">
-                                    <div class="radio">
-                                        <label><input type="radio" name="optradio" class="mr-2"> Paypal</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-12">
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" value="" class="mr-2"> I have read and accept the terms and conditions</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <p><a href="#"class="btn btn-primary py-3 px-4">Place an order</a></p>
-                        </div>
-                    </div>--}}
+
                 </div>
             </div> <!-- .col-md-8 -->
         </div>

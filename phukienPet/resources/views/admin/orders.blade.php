@@ -1,6 +1,6 @@
 @extends('layouts.appadmin')
 @section('title')
-    Orders
+    Đơn đặt hàng
 @endsection
 
 @section('content')
@@ -20,12 +20,12 @@
                     <table id="order-listing" class="table">
                         <thead>
                         <tr>
-                            <th>Order #</th>
-                            <th>Client Name</th>
-                            <th>Address</th>
-                            <th>Cart</th>
+                            <th>STT</th>
+                            <th>Tên khách hàng</th>
+                            <th>Địa chỉ</th>
+                            <th>Giỏ hàng</th>
                             <th>Payment_id</th>
-                            <th>Actions</th>
+                            <th>Hành động</th>
                         </tr>
                         </thead>
                         <tbody>

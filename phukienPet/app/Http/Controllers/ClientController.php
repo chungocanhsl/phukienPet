@@ -15,6 +15,7 @@ use App\Client;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMail;
+use Illuminate\Support\Facades\DB;
 
 class ClientController extends Controller
 {
@@ -70,7 +71,9 @@ class ClientController extends Controller
 
     public function shop() {
         $categories = Category::get();
-        $products = Product::get();//lay san pham ow tung view danh muc
+        //$products = Product::get();//lay san pham ow tung view danh muc
+        $products = DB::table('products')->paginate(4);
+
         return view('client.shop')->with('products',$products)->with('categories',$categories);
     }
 
@@ -130,7 +133,7 @@ class ClientController extends Controller
             return redirect('/checkout');
         }
         Session::forget('cart');
-        return redirect('/cart')->with('success','Purchase accomplished successfully');
+        return redirect('/cart')->with('success','Đặt hàng thành công hihi');
 
 
     }
@@ -201,10 +204,15 @@ class ClientController extends Controller
 
     public function view_by_cate($name) {
         $categories = Category::get();
-        $products = Product::where('product_category',$name)->get();
+        $products = DB::table('products')
+            ->where('product_category', $name)
+            ->paginate(4);
+
+        //$products = Product::where('product_category',$name)->get();
 
         return view('client.shop')->with('products',$products)->with('categories',$categories);
 
 
     }
+
 }
